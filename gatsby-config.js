@@ -6,5 +6,27 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      option: {
+        name: `page`,
+        path: `${__dirname}/src/pages`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      option: {
+        name: `posts`,
+        path: `${__dirname}/src/pages`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      option: {
+        name: `images`,
+        path: `${__dirname}/src/pages`
+      }
+    },
+  ],
 }
